@@ -1,191 +1,109 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Экскурсии у Мадошки | Турция Тур</title>
+    <title>Туры по Турции</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Шапка */
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1528181304800-259b08848526');
-            background-size: cover;
-            color: white;
             text-align: center;
-            padding: 100px 20px;
+            background-color: #f8f8f8;
         }
-
-        /* Навигация */
-        nav {
-            background: #333;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
+        header {
+            background-image: url('turkey_main.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
+            padding: 50px 0;
+            font-size: 2em;
         }
-
-        /* Карточки экскурсий */
         .tours {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 30px;
-            gap: 25px;
+            margin: 20px;
         }
-
-        .tour-card {
-            width: 300px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .tour-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .tour-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .tour-info {
+        .tour {
+            background: white;
+            margin: 10px;
             padding: 15px;
+            width: 300px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
-
-        .price {
-            color: #e67e22;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        /* Форма бронирования */
-        .booking-form {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #f9f9f9;
-            border-radius: 10px;
-        }
-
-        input, select {
+        .tour img {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
+            height: auto;
+            border-radius: 5px;
         }
-
+        .contact {
+            margin: 20px;
+            font-size: 1.2em;
+        }
+        .booking {
+            margin-top: 20px;
+        }
         button {
-            background: #e67e22;
+            background-color: #ff6600;
             color: white;
+            padding: 10px 20px;
             border: none;
-            padding: 15px 30px;
+            border-radius: 5px;
             cursor: pointer;
-            width: 100%;
-            font-size: 18px;
         }
-
-        /* Футер */
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+        button:hover {
+            background-color: #cc5500;
         }
     </style>
 </head>
 <body>
-    <!-- Шапка -->
     <header>
-        <h1>Экскурсии у Мадошки</h1>
-        <p>Откройте для себя лучшие туры с профессиональными гидами</p>
+        Добро пожаловать в мир незабываемых экскурсий по Турции!
     </header>
-
-    <!-- Навигация -->
-    <nav>
-        <a href="#tours">Экскурсии</a>
-        <a href="#booking">Бронирование</a>
-        <a href="#contacts">Контакты</a>
-    </nav>
-
-    <!-- Секция экскурсий -->
-    <section class="tours" id="tours">
-        <div class="tour-card">
-            <img src="https://images.unsplash.com/photo-1615228939092-4c8c6b8b5396" alt="Памуккале">
-            <div class="tour-info">
-                <h3>Памуккале и Иераполис</h3>
-                <p>Целодневная экскурсия к белоснежным террасам</p>
-                <div class="price">$75</div>
-                <button onclick="bookTour('Памуккале')">Забронировать</button>
-            </div>
+    <section class="tours">
+        <div class="tour">
+            <img src="istanbul.jpg" alt="Стамбул">
+            <h2>Стамбул</h2>
+            <p>Откройте для себя уникальную историю и культуру древнего города.</p>
+            <button>Забронировать</button>
         </div>
-
-        <div class="tour-card">
-            <img src="https://images.unsplash.com/photo-1589560368661-0d9266ef98a7" alt="Каппадокия">
-            <div class="tour-info">
-                <h3>Каппадокия</h3>
-                <p>Полёт на воздушном шаре и подземные города</p>
-                <div class="price">$150</div>
-                <button onclick="bookTour('Каппадокия')">Забронировать</button>
-            </div>
+        <div class="tour">
+            <img src="pamukkale.jpg" alt="Памуккале">
+            <h2>Памуккале</h2>
+            <p>Погрузитесь в термальные источники и насладитесь видами природного чуда.</p>
+            <button>Забронировать</button>
+        </div>
+        <div class="tour">
+            <img src="demre.jpg" alt="Демре-Мира-Кеково">
+            <h2>Демре-Мира-Кеково</h2>
+            <p>Посетите древние руины и увидьте затонувший город.</p>
+            <button>Забронировать</button>
+        </div>
+        <div class="tour">
+            <img src="cappadocia.jpg" alt="Каппадокия">
+            <h2>Каппадокия</h2>
+            <p>Насладитесь волшебными пейзажами и полетайте на воздушном шаре.</p>
+            <button>Забронировать</button>
+        </div>
+        <div class="tour">
+            <img src="north_cyprus.jpg" alt="Северный Кипр">
+            <h2>Северный Кипр</h2>
+            <p>Исследуйте живописные пляжи и богатую историю острова.</p>
+            <button>Забронировать</button>
+        </div>
+        <div class="tour">
+            <img src="antalya.jpg" alt="Обзорная по Анталии">
+            <h2>Обзорная по Анталии</h2>
+            <p>Познакомьтесь с главными достопримечательностями жемчужины Средиземноморья.</p>
+            <button>Забронировать</button>
         </div>
     </section>
-
-    <!-- Форма бронирования -->
-    <section class="booking-form" id="booking">
-        <h2>Форма бронирования</h2>
-        <form id="bookingForm">
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Телефон" required>
-            <select id="tourSelect" required>
-                <option value="">Выберите экскурсию</option>
-                <option>Памуккале</option>
-                <option>Каппадокия</option>
-            </select>
-            <input type="date" required>
-            <button type="submit">Отправить заявку</button>
-        </form>
+    <section class="contact">
+        <h2>Контактные данные</h2>
+        <p>Телефон: +905453814419</p>
+        <p>Email: hirtizhirtizov@gmail.com</p>
     </section>
-
-    <!-- Футер -->
-    <footer id="contacts">
-        <p>Контакты: +90 555 123 45 67 | info@turkey-tours.com</p>
-        <p>© 2023 Turkey Tours. Все права защищены</p>
-    </footer>
-
-    <script>
-        // Обработка формы
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Заявка отправлена! Мы свяжемся с вами в течение часа.');
-            this.reset();
-        });
-
-        function bookTour(tourName) {
-            document.getElementById('tourSelect').value = tourName;
-            window.location.href = '#booking';
-        }
-    </script>
 </body>
 </html>
