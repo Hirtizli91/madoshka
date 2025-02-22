@@ -2,83 +2,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Экскурсии по Турции</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Туры по Турции - MadoskaTour</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; }
+        header { background-color: #d35400; padding: 20px; text-align: center; color: white; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .tour { background-color: white; padding: 20px; margin: 10px; border-radius: 10px; }
+        .btn { display: inline-block; padding: 10px 15px; background-color: #2980b9; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать в мир удивительных экскурсий!</h1>
+        <h1>Добро пожаловать в MadoskaTour</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="tours.html">Туры</a></li>
-                <li><a href="booking.html">Бронирование</a></li>
                 <li><a href="about.html">О нас</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Лучшие экскурсии по Турции</h2>
-            <p>Откройте для себя незабываемые путешествия с нашими гидами.</p>
+        <section id="featured-tours">
+            <h2>Популярные туры</h2>
+            <div class="tour">
+                <img src="images/pamukkale.jpg" alt="Памуккале">
+                <h3>Памуккале</h3>
+                <p>Один из самых красивых природных объектов Турции. Термальные источники и древний город Иераполис.</p>
+                <a href="pamukkale.html" class="btn">Подробнее</a>
+                <button class="btn" onclick="alert('Бронирование Памуккале оформлено!')">Забронировать</button>
+            </div>
+            <div class="tour">
+                <img src="images/cappadocia.jpg" alt="Каппадокия">
+                <h3>Каппадокия</h3>
+                <p>Лунные пейзажи, подземные города и воздушные шары – главные достопримечательности этого региона.</p>
+                <a href="cappadocia.html" class="btn">Подробнее</a>
+                <button class="btn" onclick="alert('Бронирование Каппадокия оформлено!')">Забронировать</button>
+            </div>
+            <div class="tour">
+                <img src="images/istanbul.jpg" alt="Стамбул">
+                <h3>Стамбул</h3>
+                <p>Город, соединяющий Европу и Азию. Исторические достопримечательности, дворцы и мечети.</p>
+                <a href="istanbul.html" class="btn">Подробнее</a>
+                <button class="btn" onclick="alert('Бронирование Стамбул оформлено!')">Забронировать</button>
+            </div>
         </section>
-        <section>
-            <h3>Популярные направления</h3>
-            <ul>
-                <li><a href="pamukkale.html">Памуккале</a> - природные террасы и горячие источники.</li>
-                <li><a href="cappadocia.html">Каппадокия</a> - удивительные воздушные шары и пещерные города.</li>
-                <li><a href="istanbul.html">Стамбул</a> - история и культура двух континентов.</li>
-                <li><a href="antalya.html">Анталия</a> - живописные пляжи и древние руины.</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Детальные программы туров</h3>
-            <ul>
-                <li><a href="pamukkale.html">Памуккале</a>
-                    <p>Программа: посещение термальных источников, прогулка по белоснежным террасам, экскурсия в античный город Иераполис.</p>
-                    <img src="images/pamukkale.jpg" alt="Памуккале">
-                </li>
-                <li><a href="cappadocia.html">Каппадокия</a>
-                    <p>Программа: полет на воздушном шаре, посещение подземных городов, прогулка по долине Любви.</p>
-                    <img src="images/cappadocia.jpg" alt="Каппадокия">
-                </li>
-                <li><a href="istanbul.html">Стамбул</a>
-                    <p>Программа: экскурсия по историческим достопримечательностям, посещение Голубой мечети, прогулка по Босфору.</p>
-                    <img src="images/istanbul.jpg" alt="Стамбул">
-                </li>
-                <li><a href="antalya.html">Анталия</a>
-                    <p>Программа: отдых на пляжах, посещение водопадов Дюден, экскурсия в старый город.</p>
-                    <img src="images/antalya.jpg" alt="Анталия">
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h3>Бронирование экскурсии</h3>
-            <form action="submit_booking.php" method="post">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required><label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="tour">Выберите тур:</label>
-            <select id="tour" name="tour">
-                <option value="pamukkale">Памуккале</option>
-                <option value="cappadocia">Каппадокия</option>
-                <option value="istanbul">Стамбул</option>
-                <option value="antalya">Анталия</option>
-            </select>
-            
-            <label for="date">Дата:</label>
-            <input type="date" id="date" name="date" required>
-            
-            <button type="submit">Забронировать</button>
-        </form>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2025 Экскурсии по Турции | <a href="policy.html">Политика конфиденциальности</a></p>
-</footer>
-
+    </main>
+    <footer>
+        <p>&copy; 2025 MadoskaTour. Все права защищены.</p>
+    </footer>
 </body>
 </html>
+  
