@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Туры по Турции - MadoskaTour</title>
+    <title>Madoshka Tour - Экскурсии по Турции</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body { background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; }
@@ -10,6 +10,7 @@
         nav ul { list-style: none; padding: 0; }
         nav ul li { display: inline; margin-right: 15px; }
         nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
         .tour { background-color: white; padding: 20px; margin: 10px; border-radius: 10px; text-align: center; }
         .tour img { width: 100%; max-width: 400px; border-radius: 10px; }
         .btn { display: inline-block; padding: 10px 15px; background-color: #2980b9; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px; }
@@ -17,7 +18,7 @@
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать в MadoskaTour</h1>
+        <h1>Madoshka Tour</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -27,73 +28,37 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="featured-tours">
-            <h2>Популярные туры</h2>
-            <div class="tour">
-                <img src="images/pamukkale.jpg" alt="Памуккале">
-                <h3>Памуккале</h3>
-                <p>Один из самых красивых природных объектов Турции.</p>
-                <a href="pamukkale.html" class="btn">Подробнее</a>
-                <button class="btn" onclick="openBooking('Памуккале')">Забронировать</button>
-            </div>
-            <div class="tour">
-                <img src="images/cappadocia.jpg" alt="Каппадокия">
-                <h3>Каппадокия</h3>
-                <p>Лунные пейзажи, подземные города и воздушные шары.</p>
-                <a href="cappadocia.html" class="btn">Подробнее</a>
-                <button class="btn" onclick="openBooking('Каппадокия')">Забронировать</button>
-            </div>
-            <div class="tour">
-                <img src="images/istanbul.jpg" alt="Стамбул">
-                <h3>Стамбул</h3>
-                <p>Город, соединяющий Европу и Азию. Исторические достопримечательности, дворцы и мечети.</p>
-                <a href="istanbul.html" class="btn">Подробнее</a>
-                <button class="btn" onclick="openBooking('Стамбул')">Забронировать</button>
-            </div>
-            <div class="tour">
-                <img src="images/antalya.jpg" alt="Анталия">
-                <h3>Анталия</h3>
-                <p>Курортный рай с бирюзовыми водами Средиземного моря и богатой историей.</p>
-                <a href="antalya.html" class="btn">Подробнее</a>
-                <button class="btn" onclick="openBooking('Анталия')">Забронировать</button>
-            </div>
-        </section>
-    </main><div id="booking-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeBooking()">&times;</span>
-        <h2>Бронирование тура</h2>
-        <form id="booking-form">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" required>
-            <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" required>
-            <label for="date">Дата тура:</label>
-            <input type="date" id="date" required>
-            <input type="hidden" id="tour-name">
-            <button type="submit" class="btn">Отправить</button>
-        </form>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2025 MadoskaTour. Все права защищены.</p>
-</footer>
-
-<script>
-    function openBooking(tour) {
-        document.getElementById('tour-name').value = tour;
-        document.getElementById('booking-modal').style.display = 'block';
-    }
-    function closeBooking() {
-        document.getElementById('booking-modal').style.display = 'none';
-    }
-    document.getElementById('booking-form').onsubmit = function(event) {
-        event.preventDefault();
-        alert('Бронирование отправлено!');
-        closeBooking();
-    };
-</script>
-
+    <main class="container">
+        <h2>Популярные туры</h2>
+        <div class="tour">
+            <img src="images/pamukkale.jpg" alt="Памуккале">
+            <h3>Памуккале</h3>
+            <p>Термальные источники и древний город Иераполис.</p>
+            <a href="pamukkale.html" class="btn">Подробнее</a>
+            <button class="btn" onclick="bookTour('Памуккале')">Забронировать</button>
+        </div>
+        <div class="tour">
+            <img src="images/cappadocia.jpg" alt="Каппадокия">
+            <h3>Каппадокия</h3>
+            <p>Лунные пейзажи, подземные города и воздушные шары.</p>
+            <a href="cappadocia.html" class="btn">Подробнее</a>
+            <button class="btn" onclick="bookTour('Каппадокия')">Забронировать</button>
+        </div>
+        <div class="tour">
+            <img src="images/istanbul.jpg" alt="Стамбул">
+            <h3>Стамбул</h3>
+            <p>Город, соединяющий Европу и Азию.</p>
+            <a href="istanbul.html" class="btn">Подробнее</a>
+            <button class="btn" onclick="bookTour('Стамбул')">Забронировать</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Madoshka Tour. Все права защищены.</p>
+    </footer>
+    <script>
+        function bookTour(tourName) {
+            alert('Вы забронировали тур: ' + tourName);
+        }
+    </script>
 </body>
 </html>
