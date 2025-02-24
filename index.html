@@ -4,6 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туры по Турции - MadoskaTour</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; }
+        header { background-color: #d35400; padding: 20px; text-align: center; color: white; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .tour { background-color: white; padding: 20px; margin: 10px; border-radius: 10px; }
+        .btn { display: inline-block; padding: 10px 15px; background-color: #2980b9; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
     <header>
@@ -33,6 +42,20 @@
                 <p>Лунные пейзажи, подземные города и воздушные шары.</p>
                 <a href="cappadocia.html" class="btn">Подробнее</a>
                 <button class="btn" onclick="openBooking('Каппадокия')">Забронировать</button>
+            </div>
+            <div class="tour">
+                <img src="images/istanbul.jpg" alt="Стамбул">
+                <h3>Стамбул</h3>
+                <p>Город, соединяющий Европу и Азию. Исторические достопримечательности, дворцы и мечети.</p>
+                <a href="istanbul.html" class="btn">Подробнее</a>
+                <button class="btn" onclick="openBooking('Стамбул')">Забронировать</button>
+            </div>
+            <div class="tour">
+                <img src="images/antalya.jpg" alt="Анталия">
+                <h3>Анталия</h3>
+                <p>Курортный рай с бирюзовыми водами Средиземного моря и богатой историей.</p>
+                <a href="antalya.html" class="btn">Подробнее</a>
+                <button class="btn" onclick="openBooking('Анталия')">Забронировать</button>
             </div>
         </section>
     </main><div id="booking-modal" class="modal">
