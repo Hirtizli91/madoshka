@@ -1,64 +1,60 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madoshka Tour - Экскурсии по Турции</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body { background-color: #f4f4f4; font-family: Arial, sans-serif; color: #333; }
-        header { background-color: #d35400; padding: 20px; text-align: center; color: white; }
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 15px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
-        .tour { background-color: white; padding: 20px; margin: 10px; border-radius: 10px; text-align: center; }
-        .tour img { width: 100%; max-width: 400px; border-radius: 10px; }
-        .btn { display: inline-block; padding: 10px 15px; background-color: #2980b9; color: white; text-decoration: none; border-radius: 5px; margin-top: 10px; cursor: pointer; }
-    </style>
+    <title>Экскурсии по Турции</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Madoshka Tour</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="tours.html">Туры</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="tours/">Экскурсии</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
-        <h2>Популярные туры</h2>
+
+    <section class="hero">
+        <h1>Откройте для себя Турцию</h1>
+        <p>Незабываемые экскурсии по лучшим местам</p>
+    </section>
+
+    <section class="tours">
+        <h2>Наши экскурсии</h2>
         <div class="tour">
-            <img src="images/pamukkale.jpg" alt="Памуккале">
-            <h3>Памуккале</h3>
-            <p>Термальные источники и древний город Иераполис.</p>
-            <a href="pamukkale.html" class="btn">Подробнее</a>
-            <button class="btn" onclick="bookTour('Памуккале')">Забронировать</button>
+            <img src="images/istanbul.jpg" alt="Стамбул">
+            <h3>Стамбул</h3>
+            <p>Описание экскурсии в Стамбул...</p>
+            <a href="tours/istanbul.html" class="button">Подробнее</a>
         </div>
         <div class="tour">
             <img src="images/cappadocia.jpg" alt="Каппадокия">
             <h3>Каппадокия</h3>
-            <p>Лунные пейзажи, подземные города и воздушные шары.</p>
-            <a href="cappadocia.html" class="btn">Подробнее</a>
-            <button class="btn" onclick="bookTour('Каппадокия')">Забронировать</button>
+            <p>Описание экскурсии в Каппадокию...</p>
+            <a href="tours/cappadocia.html" class="button">Подробнее</a>
         </div>
         <div class="tour">
-            <img src="images/istanbul.jpg" alt="Стамбул">
-            <h3>Стамбул</h3>
-            <p>Город, соединяющий Европу и Азию.</p>
-            <a href="istanbul.html" class="btn">Подробнее</a>
-            <button class="btn" onclick="bookTour('Стамбул')">Забронировать</button>
+            <img src="images/pamukkale.jpg" alt="Памуккале">
+            <h3>Памуккале</h3>
+            <p>Описание экскурсии в Памуккале...</p>
+            <a href="tours/pamukkale.html" class="button">Подробнее</a>
         </div>
-    </main>
+        <div class="tour">
+            <img src="images/demre-mira-kekova.jpg" alt="Демре Мира Кекова">
+            <h3>Демре Мира Кекова</h3>
+            <p>Описание экскурсии в Демре Мира Кекова...</p>
+            <a href="tours/demre-mira-kekova.html" class="button">Подробнее</a>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Madoshka Tour. Все права защищены.</p>
+        <p>&copy; 2024 Экскурсии по Турции</p>
     </footer>
-    <script>
-        function bookTour(tourName) {
-            alert('Вы успешно забронировали тур: ' + tourName);
-        }
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
