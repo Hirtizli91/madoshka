@@ -169,30 +169,19 @@ footer {
    text-align: center;
 }
 /*Секция Услуги*/
-.services-section{
- padding: 60px 0;
- background-color: #f8f8f8;
-}
-.services{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.service{
+.service {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #fff;
+    display: block; /*  Важно! */
+    text-decoration: none; /*  Убираем подчеркивание */
+    color: inherit; /*  Наследуем цвет текста */
+    transition: transform 0.2s ease;
 }
-.service i{
-  font-size: 3em;
-  color: #D97T30;
-  margin-bottom: 15px;
-}
-.service h3{
-    color: #D97T30;
-    margin-bottom: 10px;
+.service:hover{
+     transform: scale(1.05);/*Увеличение при наведении*/
 }
 /*Изображения*/
 .image-container{
