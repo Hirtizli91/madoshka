@@ -58,7 +58,7 @@ nav ul li a i {
 
 /* Hero Section */
 .hero {
-    background-image: url('assets/img/hero-bg.jpg'); /*  ЗАМЕНИТЬ! */
+    background-image: url(''); /*  ЗАМЕНИТЬ! */
     background-size: cover;
     background-position: center;
     color: #fff;
