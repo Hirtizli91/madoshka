@@ -102,17 +102,18 @@ nav a:hover {
     z-index: 2;
 }
 .hero h1 {
-    font-size: 4.5em;  /*  Очень крупный шрифт */
-    margin-bottom: 20px;
-     font-family: 'Cormorant Garamond', serif;
-
+    font-size: 5em;       /*  Увеличили шрифт */
+    margin-bottom: 30px;  /*  Увеличили отступ снизу */
+    line-height: 1.2;     /*  Добавили межстрочный интервал */
 }
 
 .hero h2 {
-    font-size: 2.2em;
-    margin-bottom: 40px;
-    font-weight: normal; /*  Убрали жирность */
+    font-size: 2em;       /*  Немного уменьшили шрифт (был слишком большой) */
+    font-weight: normal;  /*  Оставили нормальное начертание */
+    margin-bottom: 40px;  /*  Оставили отступ снизу */
+    line-height: 1.3;     /*  Добавили межстрочный интервал */
 }
+
 
 .hero-buttons a {
     display: inline-block;
