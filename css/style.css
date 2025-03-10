@@ -240,3 +240,15 @@ footer {
       position: static;
     }
 }
+.content-wrapper {
+    min-height: calc(100vh - 70px - 60px); /*  Рассчитываем высоту */
+    /* 70px -  высота header, 60px - высота footer */
+    /*  Может потребоваться корректировка значений */
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto; /* Добавляем это */
+}
+
+
