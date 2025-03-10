@@ -1,36 +1,44 @@
 /* Общие стили */
 body {
-    font-family: sans-serif;  /* Можешь потом поменять шрифт */
+    font-family: 'Open Sans', sans-serif; /*  Замени, если используешь другой шрифт */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Светло-серый фон */
+    background-color: #f8f8f8; /*  Более светлый фон */
+    color: #333;
 }
 
 .container {
-    width: 80%;  /* Ширина контента (можно изменить) */
-    margin: 0 auto; /* Центрирование */
-    overflow: hidden; /* Чтобы не было горизонтальной прокрутки */
+    width: 85%;  /*  Немного увеличили ширину */
+    max-width: 1200px;  /*  Добавили максимальную ширину */
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 h1, h2 {
     text-align: center;
-    color: #333;  /* Темно-серый цвет для заголовков */
+    color: #D97T30; /*  Терракотовый цвет (измени, если нужно) */
+    font-family: 'Cormorant Garamond', serif;  /*  Замени, если используешь другой шрифт */
+}
+/* Margin Between H tags*/
+h2 {
+    margin-bottom: 1em;
 }
 
-/* Стили для шапки (header) */
+/* Шапка */
 header {
-    background-color: #fff; /* Белый фон */
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    background-color: #fff;
+    padding: 15px 0; /*  Уменьшили padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 5;
 }
 
 .logo {
-    float: left;
     font-size: 1.5em;
-    font-weight: bold;
+    font-family: 'Cormorant Garamond', serif;  /*  Замени, если используешь другой шрифт */
+    float: left;
 }
 
-/* Стили для навигации (nav) */
 nav {
     float: right;
 }
@@ -43,92 +51,187 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 35px;  /*  Увеличили отступы */
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #555; /*  Более приглушенный цвет */
     font-weight: bold;
-    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
 }
 
 nav a:hover {
-    color: #e44d26;  /* Оранжевый цвет при наведении (поменяй на свой вкус) */
+    color: #D97T30;  /*  Терракотовый при наведении */
+    border-bottom-color: #D97T30; /*  Рамка снизу при наведении */
 }
 
-/* Стили для секции "hero" */
+/* Секция Hero */
 .hero {
-    background-color: #e44d26; /* Оранжевый фон (поменяй на свой вкус) */
+    background-image: url('../img/hero-background.jpg'); /*  Добавь СВОЁ изображение! */
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 50px 0;
+    padding: 120px 0;  /*  Увеличили padding */
     text-align: center;
+    position: relative; /*  Для затемнения */
 }
-.hero h1{
+
+/*  Затемнение фона */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /*  Полупрозрачный черный */
+}
+/*Делаем поверх затемнения*/
+.hero-buttons, .hero h1, .hero h2{
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 4.5em;  /*  Очень крупный шрифт */
     margin-bottom: 20px;
+     font-family: 'Cormorant Garamond', serif;
+
 }
-.hero h2{
-    margin-bottom: 15px;
+
+.hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    font-weight: normal; /*  Убрали жирность */
 }
+
 .hero-buttons a {
-    display: inline-block; /* Кнопки в строку */
-    margin: 0 10px;
-    padding: 10px 20px;
-    border-radius: 5px;
+    display: inline-block;
+    margin: 0 15px;  /*  Увеличили отступы */
+    padding: 18px 36px;  /*  Увеличили padding */
+    border-radius: 30px;  /*  Сильно скругленные углы */
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: background-color 0.3s ease;  /* Плавное изменение фона при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /*  Добавили transform */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /*  Тень */
 }
-
+.hero-buttons a:hover{
+     transform: scale(1.05);
+}
 .whatsapp-button {
-    background-color: #25d366; /* Зеленый для WhatsApp */
+    background-color: #25d366;
 }
 
 .whatsapp-button:hover {
-    background-color: darkgreen; /* Более темный зеленый при наведении */
+    background-color: #128C7E; /*  Более темный зеленый */
 }
 
 .telegram-button {
-    background-color: #0088cc; /* Синий для Telegram */
+    background-color: #0088cc;
 }
 
 .telegram-button:hover {
-    background-color: darkblue; /* Более темный синий при наведении */
+    background-color: #0077b5; /*  Более темный синий */
 }
 
-/* Стили для футера (footer) */
+/* Футер */
 footer {
-    background-color: #333;  /* Темно-серый фон */
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
     position: relative;
 }
 .footer-social{
-    position: absolute;
-    left: 45%;
+    text-align: center;
+    margin-bottom: 10px;
 }
 .footer-social a{
-  margin: 5px;
+    margin: 10px;
+    color: white;
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+}
+.footer-social a:hover{
+    color: #D97T30;
+}
+/*Секция о нас*/
+.about-section{
+  padding: 60px 0;
+}
+.about-section p{
+   line-height: 1.8;
+   font-size: 1.1em;
+   color: #555;
+   text-align: center;
+}
+/*Секция Услуги*/
+.services-section{
+ padding: 60px 0;
+ background-color: #f8f8f8;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.service{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+.service i{
+  font-size: 3em;
+  color: #D97T30;
+  margin-bottom: 15px;
+}
+.service h3{
+    color: #D97T30;
+    margin-bottom: 10px;
+}
+/*Изображения*/
+.image-container{
+    text-align: center;
+}
+.responsive-image{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Закругляем углы */
+  margin-top: 20px; /* Добавляем отступ сверху */
 }
 
-/* Адаптивность (пример) - для мобильных устройств */
+/* Адаптивность */
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Увеличиваем ширину на маленьких экранах */
+        width: 90%;
     }
 
     .logo, nav {
-        float: none; /* Убираем обтекание */
-        text-align: center; /* Центрируем */
+        float: none;
+        text-align: center;
     }
-
+    .logo{
+        margin-bottom: 10px;
+    }
     nav li {
-        display: block; /* Элементы меню в столбик */
+        display: block;
         margin: 10px 0;
     }
-      .hero-buttons a {
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-buttons a {
         display: block;
         margin: 10px auto;
         width: 80%;
