@@ -1,0 +1,139 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;  /* Можешь потом поменять шрифт */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Светло-серый фон */
+}
+
+.container {
+    width: 80%;  /* Ширина контента (можно изменить) */
+    margin: 0 auto; /* Центрирование */
+    overflow: hidden; /* Чтобы не было горизонтальной прокрутки */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;  /* Темно-серый цвет для заголовков */
+}
+
+/* Стили для шапки (header) */
+header {
+    background-color: #fff; /* Белый фон */
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.logo {
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Стили для навигации (nav) */
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover {
+    color: #e44d26;  /* Оранжевый цвет при наведении (поменяй на свой вкус) */
+}
+
+/* Стили для секции "hero" */
+.hero {
+    background-color: #e44d26; /* Оранжевый фон (поменяй на свой вкус) */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+.hero h1{
+    margin-bottom: 20px;
+}
+.hero h2{
+    margin-bottom: 15px;
+}
+.hero-buttons a {
+    display: inline-block; /* Кнопки в строку */
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;  /* Плавное изменение фона при наведении */
+}
+
+.whatsapp-button {
+    background-color: #25d366; /* Зеленый для WhatsApp */
+}
+
+.whatsapp-button:hover {
+    background-color: darkgreen; /* Более темный зеленый при наведении */
+}
+
+.telegram-button {
+    background-color: #0088cc; /* Синий для Telegram */
+}
+
+.telegram-button:hover {
+    background-color: darkblue; /* Более темный синий при наведении */
+}
+
+/* Стили для футера (footer) */
+footer {
+    background-color: #333;  /* Темно-серый фон */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+.footer-social{
+    position: absolute;
+    left: 45%;
+}
+.footer-social a{
+  margin: 5px;
+}
+
+/* Адаптивность (пример) - для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Увеличиваем ширину на маленьких экранах */
+    }
+
+    .logo, nav {
+        float: none; /* Убираем обтекание */
+        text-align: center; /* Центрируем */
+    }
+
+    nav li {
+        display: block; /* Элементы меню в столбик */
+        margin: 10px 0;
+    }
+      .hero-buttons a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    .footer-social{
+      position: static;
+    }
+}
