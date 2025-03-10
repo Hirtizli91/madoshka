@@ -1,46 +1,49 @@
 /* Общие стили */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /*  ЗАМЕНИ, если используешь другой шрифт */
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #f8f8f8; /*  Светло-серый фон */
+    color: #333; /*  Темно-серый цвет текста */
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
 }
 
 .container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
+    width: 85%;  /*  Ширина контента */
+    max-width: 1200px; /*  Максимальная ширина */
+    margin: 0 auto;   /*  Центрирование */
+    overflow: hidden;  /*  Чтобы не было горизонтальной прокрутки */
 }
 
-h1, h2 {
-    text-align: center;
-    color: #D97T30;
-    font-family: 'Cormorant Garamond', serif;
+h1, h2, h3, .logo {  /*  Добавили .logo */
+    font-family: 'Cormorant Garamond', serif;  /*  ЗАМЕНИ, если используешь другой шрифт */
+    color: #D97T30;  /*  Терракотовый (или другой акцентный цвет) */
 }
 
 h2 {
-    margin-bottom: 1em;
+    margin-bottom: 1em;  /*  Отступ снизу */
 }
 
 /* Шапка */
 header {
-    background-color: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10;
+    background-color: #fff;  /*  Белый фон */
+    padding: 15px 0;  /*  Внутренние отступы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /*  Тень */
+     position: relative;
+     z-index: 5;
 }
 
 .logo {
-    font-size: 1.5em;
-    font-family: 'Cormorant Garamond', serif;
-    float: left;
+    font-size: 1.7em; /*  Немного увеличили */
+    font-weight: bold;
+    float: left;      /*  Выравнивание по левому краю */
+    margin-top: 5px;
 }
 
 nav {
-    float: right;
+    float: right;  /*  Выравнивание по правому краю */
 }
 
 nav ul {
@@ -51,191 +54,32 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 35px;
+    margin-left: 40px;  /*  Отступы между пунктами меню */
 }
 
 nav a {
     text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-}
-
-nav a:hover {
-    color: #D97T30;
-    border-bottom-color: #D97T30;
-}
-
-/* Секция Hero */
-.hero {
-    background-image: url('../img/IMG_20250310_075805.jpg'); /* ПРОВЕРЬ ПУТЬ! */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 120px 0;
-    text-align: center;
-    position: relative;
-}
-
-/* Затемнение фона */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.hero > * { /*  Используем один раз */
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 5em;
-    margin-bottom: 30px;
-    line-height: 1.2;
-}
-
-.hero h2 {
-    font-size: 2em;
+    color: #777;  /*  Более приглушенный цвет ссылок */
     font-weight: normal;
-    margin-bottom: 40px;
-    line-height: 1.3;
-}
-
-.hero-buttons a {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 18px 36px;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.hero-buttons a:hover {
-    transform: scale(1.05);
-}
-
-.whatsapp-button {
-    background-color: #25d366;
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E;
-}
-
-.telegram-button {
-    background-color: #0088cc;
-}
-
-.telegram-button:hover {
-    background-color: #0077b5;
-}
-
-/* Футер */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-}
-
-.footer-social {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* Общие стили */
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-    display: flex; /* Добавлено */
-    flex-direction: column; /* Добавлено */
-    min-height: 100vh; /* Добавлено */
-}
-
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-h1, h2 {
-    text-align: center;
-    color: #D97T30;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-h2 {
-    margin-bottom: 1em;
-}
-
-/* Шапка */
-header {
-    background-color: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 10;
-}
-
-.logo {
-    font-size: 1.5em;
-    font-family: 'Cormorant Garamond', serif;
-    float: left;
-}
-
-nav {
-    float: right;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-left: 35px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
     transition: color 0.3s ease;
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
 }
 
 nav a:hover {
-    color: #D97T30;
+    color: #D97T30; /*  Цвет при наведении */
     border-bottom-color: #D97T30;
 }
 
 /* Секция Hero */
 .hero {
-    background-image: url('img/IMG_20250310_075805.jpg'); /* ИСПРАВЬ ПУТЬ, если нужно */
+    background-image: url('img/IMG_20250310_075805.jpg');  /*  ЗАМЕНИ НА СВОЙ ПУТЬ! */
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 120px 0;
+    padding: 60px 0;  /*  Уменьшили отступы */
     text-align: center;
-    position: relative;
+    position: relative; /*  Для затемнения */
 }
 
 /* Затемнение фона */
@@ -246,7 +90,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /*  50% прозрачности */
     z-index: 1;
 }
 
@@ -256,15 +100,15 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 5em;
-    margin-bottom: 30px;
+    font-size: 4em;  /*  Уменьшили размер */
+    margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero h2 {
-    font-size: 2em;
+    font-size: 1.8em; /*  Уменьшили размер */
     font-weight: normal;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.3;
 }
 
@@ -306,7 +150,7 @@ footer {
     color: white;
     text-align: center;
     padding: 30px 0;
-    margin-top: auto; /* Добавлено */
+    margin-top: auto;/*Добавили*/
 }
 
 .footer-social {
@@ -389,7 +233,10 @@ footer {
 }
 
 /* Обертка для контента (для прижатия футера) */
-/*Удалили*/
+ .content-wrapper{
+      min-height: auto;/*Удалили*/
+ }
+
 /* Адаптивность */
 @media (max-width: 768px) {
     .container {
@@ -424,8 +271,7 @@ footer {
         margin: 10px auto;
         width: 80%;
     }
-
-    .footer-social {
-      position: static;
-    }
+     .footer-social{
+       position: static;
+     }
 }
