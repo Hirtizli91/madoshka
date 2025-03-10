@@ -87,8 +87,15 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /*  Полупрозрачный черный */
+    background-color: rgba(0, 0, 0, 0.5); /*  Черный полупрозрачный фон (50% прозрачности) */
+    z-index: 1; /*  Чтобы затемнение было ПОД текстом и кнопками */
 }
+
+.hero > * { /*  Это чтобы текст и кнопки были НАД затемнением */
+    position: relative;
+    z-index: 2;
+}
+
 /*Делаем поверх затемнения*/
 .hero-buttons, .hero h1, .hero h2{
     position: relative;
