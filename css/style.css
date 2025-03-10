@@ -1,45 +1,45 @@
 /* Общие стили */
 body {
-    font-family: 'Open Sans', sans-serif; /*  ЗАМЕНИ, если используешь другой шрифт */
+    font-family: 'Open Sans', sans-serif; /*  Шрифт для основного текста */
     margin: 0;
     padding: 0;
     background-color: #f8f8f8; /*  Светло-серый фон */
-    color: #333; /*  Темно-серый цвет текста */
-     display: flex;
-     flex-direction: column;
-     min-height: 100vh;
+    color: #333;             /*  Темно-серый цвет текста */
+    display: flex;          /*  Для "прижатия" футера */
+    flex-direction: column;  /*  Для "прижатия" футера */
+    min-height: 100vh;      /*  Для "прижатия" футера */
 }
 
 .container {
-    width: 85%;  /*  Ширина контента */
+    width: 85%;        /*  Ширина контента */
     max-width: 1200px; /*  Максимальная ширина */
-    margin: 0 auto;   /*  Центрирование */
-    overflow: hidden;  /*  Чтобы не было горизонтальной прокрутки */
+    margin: 0 auto;     /*  Центрирование */
+    overflow: hidden;    /*  Чтобы не было горизонтальной прокрутки */
 }
 
-h1, h2, h3, .logo {  /*  Добавили .logo */
-    font-family: 'Cormorant Garamond', serif;  /*  ЗАМЕНИ, если используешь другой шрифт */
-    color: #D97T30;  /*  Терракотовый (или другой акцентный цвет) */
+h1, h2, h3, .logo {
+    font-family: 'Cormorant Garamond', serif; /*  Шрифт для заголовков и лого */
+    color: #D97T30; /*  Терракотовый (или другой акцентный цвет) */
 }
 
 h2 {
-    margin-bottom: 1em;  /*  Отступ снизу */
+    margin-bottom: 1em; /*  Отступ снизу */
 }
 
 /* Шапка */
 header {
     background-color: #fff;  /*  Белый фон */
-    padding: 15px 0;  /*  Внутренние отступы */
+    padding: 15px 0;        /*  Внутренние отступы */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /*  Тень */
-     position: relative;
-     z-index: 5;
+    position: relative;     /*  Для правильного позиционирования z-index */
+    z-index: 10;            /*  Чтобы шапка была над Hero (если Hero с фоном) */
 }
 
 .logo {
-    font-size: 1.7em; /*  Немного увеличили */
+    font-size: 1.7em;  /*  Размер шрифта логотипа */
     font-weight: bold;
-    float: left;      /*  Выравнивание по левому краю */
-    margin-top: 5px;
+    float: left;       /*  Выравнивание по левому краю */
+    margin-top: 5px;  /*  Небольшой отступ сверху */
 }
 
 nav {
@@ -59,7 +59,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #777;  /*  Более приглушенный цвет ссылок */
+    color: #777; /*  Более приглушенный цвет ссылок */
     font-weight: normal;
     transition: color 0.3s ease;
     padding-bottom: 5px;
@@ -73,7 +73,7 @@ nav a:hover {
 
 /* Секция Hero */
 .hero {
-    background-image: url('img/IMG_20250310_075805.jpg');  /*  ЗАМЕНИ НА СВОЙ ПУТЬ! */
+    background-image: url('img/IMG_20250310_075805.jpg');  /*  ПРОВЕРЬ ПУТЬ! */
     background-size: cover;
     background-position: center;
     color: white;
@@ -100,13 +100,13 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 4em;  /*  Уменьшили размер */
+    font-size: 4em;    /*  Уменьшили размер */
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
 .hero h2 {
-    font-size: 1.8em; /*  Уменьшили размер */
+    font-size: 1.8em;  /*  Уменьшили размер */
     font-weight: normal;
     margin-bottom: 30px;
     line-height: 1.3;
@@ -150,7 +150,7 @@ footer {
     color: white;
     text-align: center;
     padding: 30px 0;
-    margin-top: auto;/*Добавили*/
+    margin-top: auto; /* "Прижимаем" футер к низу */
 }
 
 .footer-social {
@@ -171,71 +171,74 @@ footer {
 
 /* Секция "О нас" */
 .about-section {
-    padding: 60px 0;
+    padding: 60px 0; /*  Отступы сверху и снизу */
 }
 
 .about-section p {
-    line-height: 1.8;
-    font-size: 1.1em;
-    color: #555;
+    line-height: 1.8;  /*  Межстрочный интервал */
+    font-size: 1.1em;  /*  Размер шрифта */
+    color: #555;     /*  Более приглушенный цвет текста */
     text-align: center;
 }
 
 /* Секция "Услуги" */
 .services-section {
-    padding: 60px 0;
-    background-color: #f8f8f8;
+    padding: 60px 0;        /*  Отступы сверху и снизу */
+    background-color: #f8f8f8;  /*  Светло-серый фон */
 }
 
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    display: grid;  /*  Используем grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /*  Адаптивные колонки */
+    gap: 30px;      /*  Отступы между карточками */
 }
 
 .service {
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #fff;
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
+    padding: 40px 20px;  /*  Внутренние отступы (сверху/снизу больше, чем по бокам) */
+    border-radius: 10px;  /*  Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /*  Тень */
+    text-align: center;    /*  Выравнивание по центру */
+    background-color: #fff;  /*  Белый фон */
+    display: block;        /*  Чтобы карточка была блочным элементом и ссылкой */
+    text-decoration: none;  /*  Убираем подчеркивание у ссылки */
+    color: inherit;        /*  Наследуем цвет текста от родителя */
+    transition: transform 0.2s ease;  /*  Плавное увеличение при наведении */
 }
 
 .service:hover {
-    transform: scale(1.03);
+    transform: scale(1.03);  /*  Увеличение при наведении */
 }
 
 .service i {
-    font-size: 3em;
-    color: #D97T30;
-    margin-bottom: 15px;
+    font-size: 3em;       /*  Размер иконки */
+    color: #D97T30;     /*  Акцентный цвет */
+    margin-bottom: 15px;  /*  Отступ снизу */
 }
 
 .service h3 {
-    color: #D97T30;
-    margin-bottom: 10px;
+    color: #D97T30;     /*  Акцентный цвет */
+    margin-bottom: 10px; /*  Отступ снизу */
+    font-size: 1.2em;
 }
 
 /* Изображения */
 .image-container {
-    text-align: center;
+    text-align: center; /*  Выравнивание по центру */
 }
 
 .responsive-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+    max-width: 100%;  /*  Чтобы изображение не выходило за пределы контейнера */
+    height: auto;      /*  Чтобы сохранялись пропорции */
+    border-radius: 10px;  /*  Скругленные углы (по желанию) */
+    margin-top: 20px;   /*  Отступ сверху */
 }
 
-/* Обертка для контента (для прижатия футера) */
- .content-wrapper{
-      min-height: auto;/*Удалили*/
- }
+/* Обертка для контента (для прижатия футера) – УДАЛЯЕМ */
+/* .content-wrapper {
+    min-height: calc(100vh - ...);
+    display: flex;
+    flex-direction: column;
+} */
 
 /* Адаптивность */
 @media (max-width: 768px) {
@@ -271,7 +274,4 @@ footer {
         margin: 10px auto;
         width: 80%;
     }
-     .footer-social{
-       position: static;
-     }
 }
