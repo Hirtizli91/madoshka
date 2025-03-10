@@ -6,7 +6,6 @@ body {
     background-color: #f8f8f8; /*  Более светлый фон */
     color: #333;
 }
-
 .container {
     width: 85%;  /*  Немного увеличили ширину */
     max-width: 1200px;  /*  Добавили максимальную ширину */
@@ -191,6 +190,10 @@ footer {
 .service:hover{
      transform: scale(1.05);/*Увеличение при наведении*/
 }
+.services-detail {
+    padding: 60px 0;
+}
+
 /*Изображения*/
 .image-container{
     text-align: center;
