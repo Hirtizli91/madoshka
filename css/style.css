@@ -1,115 +1,36 @@
-/* Общие стили */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-}
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(to bottom, #fefcea, #f1da36); color: #333; }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+header { background-color: #fff8dc; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
+header h1 { margin: 0; color: #e67e22; font-size: 2rem; }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+nav ul li a { text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s ease; }
 
-nav li {
-    margin-left: 20px;
-}
+nav ul li a:hover { color: #e67e22; }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
+.hero { text-align: center; padding: 3rem 1rem; background: url('https://cdn.pixabay.com/photo/2016/11/29/05/18/turkey-1869337_1280.jpg') no-repeat center center/cover; color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.7); }
 
-/* Стили для секции hero */
-.hero {
-    background-image: url('images/turkey-bg.jpg'); /* Замените на свое изображение */
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
+.hero h2 { font-size: 2.5rem; }
 
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+.btn { background-color: #e67e22; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 25px; font-size: 1rem; text-decoration: none; display: inline-block; margin-top: 1rem; transition: background-color 0.3s ease; }
 
-.hero-buttons a {
-    display: inline-block;
-    padding: 15px 30px;
-    margin: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
+.btn:hover { background-color: #d35400; }
 
-.hero-buttons a:hover {
-    transform: scale(1.05);
-}
+section { padding: 2rem 1rem; max-width: 960px; margin: auto; }
 
-.whatsapp-button {
-    background-color: #25D366; /* Цвет WhatsApp */
-}
+h2 { text-align: center; color: #c0392b; font-size: 2rem; }
 
-.telegram-button {
-    background-color: #0088CC; /* Цвет Telegram */
-}
+.tour-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
 
-/* Стили для раздела "О компании" */
-.about-company {
-    padding: 50px 0;
-}
+.tour { background: #fff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
+footer { background-color: #fff8dc; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #777; border-top: 1px solid #eaeaea; }
 
-.about-company img {
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+@media (max-width: 600px) { .hero h2 { font-size: 1.8rem; }
 
-/* Стили для раздела "Популярные направления" */
-.popular-destinations {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-}
+nav ul { flex-direction: column; gap: 0.5rem; }
 
-.destinations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
+.btn { width: 100%; padding: 1rem; } }
 
-.destination-card {
